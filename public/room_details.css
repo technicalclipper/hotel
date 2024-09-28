@@ -1,0 +1,194 @@
+body{
+    height:100vh;
+    width:100%;
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+
+    
+}
+a {
+  all: unset;
+  display: inline; /* Optionally, reset the display property */
+}
+
+.navbar{
+    width:90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:200px;
+    
+}
+.first_nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.second_nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:50px;
+}
+.third_nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+}
+.navtitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+.resortname{
+    font-size: 25px;
+    font-weight: 600;
+}
+.logo{
+    height:100px;
+    width:120px;
+}
+.profile{
+    height:50px;
+    width:50px;
+    
+}
+.profile_nav{
+    display: grid;
+    place-items: center;
+}
+.options {
+    z-index: 1;
+    border: 1px solid grey; 
+    background-color: white; 
+    padding: 10px; 
+    width: 130px; 
+    height: auto; 
+    position: absolute; 
+    top: 80px; 
+    display: none;
+}
+.optionvisible{
+    display: block;
+}
+.optiontext{
+    width:100%;
+    height:30px;
+}
+
+.button{
+    height:50px;
+    background-color: black;
+    width:100px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+.buttontext{
+    color: white;
+}
+.container {
+    position: relative;
+    width: 90%;
+    height: 740px;
+    border-radius: 30px;
+    overflow: hidden; 
+    display:grid;
+    grid-template-columns: 0.65fr 0.35fr;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("images/room_details.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity:0.5; 
+    z-index: -1; 
+    border-radius: 30px; /
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the blurred background */
+    padding: 20px;
+    color: black; /* Example content styling */
+}
+.left-div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+.image-grid{
+    display:grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows:0.5fr 0.5fr ;
+    width:600px;
+    height:480px;
+    gap:-20px;
+}
+.roomangles{
+    height:160px;
+    width:240px;
+    border:2px solid white;
+}
+.longdesc{
+    width:900px;
+    font-size: 20px;
+    font-weight:500;
+}
+.roomname{
+    font-size: 30px;
+    font-weight: 600;
+}
+.rating{
+    height:30px;
+    width:150px;
+}
+#bookingdate{
+    height:50px;
+    width:120px;
+    opacity: 0.7;
+    border: 2px solid black;
+
+}
+
+.bookbutton{
+    height:70px;
+    width:140px;
+    background-color: black;
+    display:grid;
+    place-items:center;
+}
+.booktext{
+    color:white;
+}
+.right-inner{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    justify-content: center;
+}
+.content{
+    font-weight: 600;
+    padding:0;
+    font-size: 28px;
+}
+.right-inner{
+    margin-top:100px;
+}
+a{
+    all:unset;
+ }
+ 

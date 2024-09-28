@@ -1,0 +1,144 @@
+body{
+    height:100vh;
+    width:100%;
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+
+    
+}
+a {
+    all: unset;
+    display: inline; /* Optionally, reset the display property */
+  }
+  
+
+.navbar{
+    width:90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:200px;
+    
+}
+.first_nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.second_nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:50px;
+}
+.third_nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+}
+.navtitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+.resortname{
+    font-size: 25px;
+    font-weight: 600;
+}
+.logo{
+    height:100px;
+    width:120px;
+}
+.profile{
+    height:50px;
+    width:50px;
+    
+}
+.profile_nav{
+    display: grid;
+    place-items: center;
+}
+.options {
+    z-index: 1;
+    border: 1px solid grey; 
+    background-color: white; 
+    padding: 10px; 
+    width: 130px; 
+    height: auto; 
+    position: absolute; 
+    top: 80px; 
+    display: none;
+}
+.optionvisible{
+    display: block;
+}
+.optiontext{
+    width:100%;
+    height:30px;
+}
+
+.button{
+    height:50px;
+    background-color: black;
+    width:100px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+.buttontext{
+    color: white;
+}
+.container {
+    background-image: url("images/dashboardbg.jpg");
+    width: 90%;
+    height: 740px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 30px;
+}
+.greeting{
+    color: white;
+    font-weight: 600;
+    font-size: 80px;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+#containertitle{
+    color:white;
+    font-weight: 500;
+    font-size: 60px;
+    width:550px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.room_image_container{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    margin-top: 20px;
+}
+.room{
+    width:200px;
+    height:150px;
+    border-radius: 35px;
+}
+#bottomtext{
+    color:black;
+    font-weight: 600;
+    font-size: 40px;
+    width:1200px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.greetingdiv{
+    height:100px;
+}
+a{
+   all:unset;
+}

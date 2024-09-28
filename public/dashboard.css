@@ -1,0 +1,73 @@
+body{
+    
+}
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:800px;
+    height:80px;
+    align-items: center;
+}
+.navtitle{
+    font-size: 40px;
+    font-weight: 600;
+}
+.logout{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    height:35px;
+    width:70px;
+    padding:17.5px 35px;
+}
+.retrieve-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:20px;
+}
+.retrieve-title{
+    font-size: 30px;
+    font-weight: 500;
+}
+#retrieve-date{
+    font-size: 28px;
+}
+.booking-content{
+    display: flex;
+    flex-direction: row;
+    gap:90px;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+}
+.book-title{
+    font-size: 25px;
+    font-weight: 400;
+    width:20%;
+    text-align: center;
+}
+.booking-container{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    margin-top: 50px;
+    border: 2px solid black;
+    width:100%;
+    height:600px;
+    overflow-y: scroll;
+}
+.book-head{
+    font-size: 25px;
+    font-weight: 600;
+    width:20%;
+    text-align: center;
+}
+.campaign{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color:red;
+}

@@ -1,0 +1,124 @@
+body{
+    height:100vh;
+    width:100%;
+    margin:0;
+    background-color: #87cefa;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+}
+
+.main-container{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-columns: 0.4fr 0.6fr;
+
+    
+}
+.left-part{
+    background-color: #87cefa;
+    height:100%;
+}
+.right-part{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: white;
+    height:100%;
+    display: grid;
+    place-items: center;
+}
+.left-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+
+}
+.logo{
+    height:130px;
+    width:160px;
+}
+.logo-text{
+    font-weight: 600;
+    font-size: 30px;
+}
+.traveller_image{
+    width:360px;
+    height:750.4px;
+
+}
+.traveller-div{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top:100px;
+   
+}
+.login-container{
+    width:75%;
+    height:70%;
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    border: 1px solid white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+}
+.inner-login-container{
+    background: linear-gradient(to bottom, #87cefa, white);
+    width:98%;
+    height:98%;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2%;
+}
+
+.input{
+    width:50%;
+    height:7%;
+    font-size: 25px;
+    background-color: #EDF1D6;
+     border: 1px solid black;
+     background-color: #AFDEFB;
+}
+#login-text{
+ 
+    font-size: 30px;
+    font-weight: 700;
+}
+.line{
+    background-color: black;
+    width: 400px;
+   position: relative;
+   top:10px;
+}
+.label{
+    font-weight: 700;
+}
+.submit{
+    width:50%;
+    height:7%;
+    background-color: black;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+.submit-text{
+    color:white;
+    font-size: 25px;
+}
+.logo-text{
+    margin-left:32%;
+    position: relative;
+    top:20px;
+}
+.resortname{
+    font-size: 50px;
+    font-weight:800
+}

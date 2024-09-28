@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/dashboard.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navtitle">Admin Dashboard</div>
+        <a class="logout" href="/logout">logout</a>
+    </div>
+    <div class="campaign">
+        Last Automated Campaign for low booking rate: <%=campaign%>
+    </div>
+    <div class="retrieve-info">
+        <div class="retrieve-title">Display all bookings on date:</div>
+        <input type="date" id="retrieve-date" name="bookingdate">
+        <div></div>
+    </div>
+
+    <div class="booking-container">
+        <div class="booking-content">
+            <div class="book-head">name</div>
+            <div class="book-head">username</div>
+            <div class="book-head">date</div>
+            <div class="book-head">room name</div>
+            <Div class="book-head">price</Div>
+        </div>
+        <% if(locals.no){ %>
+            <% for (var i=0;i<locals.no;i++) { %>
+                <div class="booking-content">
+                    <div class="book-title"><%=userdetails[i].name%></div>
+                    <div class="book-title"><%=data[i].username%></div>
+                    <div class="book-title"><%=data[i].date%></div>
+                    <div class="book-title"><%=data[i].roomname%></div>
+                    <Div class="book-title"><%=data[i].price%></Div>
+                </div>
+            <% } %>
+        <% } %>
+
+
+    </div>
+
+</body>
+<script src="/dashboard.js"></script>
+</html>

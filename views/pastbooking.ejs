@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/pastbooking.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="first_nav">
+            <img class="logo" src="images/logo1.png"/>
+            <div class="resortname">AP-ICE Resorts</div>
+        </div>
+
+        <div class="second_nav">
+            <a href="/home"><div class="navtitle">Home</div></a>
+            <a href="/rooms"><div class="navtitle">All Rooms</div></a>
+            <a href="/contact"><div class="navtitle">Contact US</div></a>
+        </div>
+
+        <% if(locals.user){ %>
+            <div class="profile_nav">
+                <img class="profile" src="images/profile.png"/>
+                <div class="options">
+                    <a href="/profile"><div class="optiontext">Profile</div></a>
+                    <div class="optiontext">Past Bookings</div>
+                    <a href="/logout"><div class="navtitle">Log out</div></a>
+                </div>
+            </div>
+        <%} else{%>
+        <div class="third_nav">
+            <a href="/login"><div class="button login"><p class="buttontext">Login</p></div></a>
+            <a href="register"><div class="button signup"><p class="buttontext">Signup</p></div></a>
+        </div>
+        <%}%>
+    </nav>
+
+    <div class="container">
+        <div class="title">Past Bookings</div>
+        <div class="bookings">
+                <% for(var i=0;i<no;i++){ %>
+                    <div class="order">
+                        <img class="roomimage" src="/images/rooms/<%=data[i].rno%>.jpg">
+                        <div class="content"><%=data[i].roomname%></div>
+                        <div class="content"><%=data[i].date%></div>
+                        <Div class="content">book again</Div>
+                    </div> >
+                <% } %>
+
+        </div>
+    </div>
+    
+</body>
+<script src="/pastbooking.js"></script>
+</html>
