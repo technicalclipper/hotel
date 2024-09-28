@@ -30,3 +30,7 @@ to test it locally on ur pc:
 download the repository
 change the host name of db in index.js to : crrdef52ng1s7390oiog-a.oregon-postgres.render.com
 
+credentials for admin log:
+username: admin@apice
+password: admin123
+
