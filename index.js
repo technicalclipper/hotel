@@ -53,7 +53,7 @@ app.use(passport.session());
 
 const db = new pg.Client({
     user: "technicalclipper",
-    host: "crrdef52ng1s7390oiog-a",
+    host: "crrdef52ng1s7390oiog-a.oregon-postgres.render.com",
     database: "hotelbooking_4jd2",
     password: "hviAxR637dgn1tQ94wslmHq8c9lQLDjz",
     port: 5432,
