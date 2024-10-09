@@ -10,15 +10,48 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="/dashboard.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For charts -->
 </head>
 <body>
     <div class="navbar">
-        <div class="navtitle">Admin Dashboard</div>
+        <div class="navtitle">AP_ICE RESORT</div>
         <a class="logout" href="/logout">logout</a>
     </div>
-    <div class="campaign">
-        Last Automated Campaign for low booking rate: <%=campaign%>
+
+    <div class="admintext">
+        Admin Dashboard
     </div>
+    <div class="graph">
+        <!-- Total Rooms Booked Box -->
+        <div class="box">
+            <h2>Total Rooms Booked This Week</h2>
+            <canvas id="roomsChart"></canvas>
+            <p id="totalRoomsValue">Total: 80 rooms</p> <!-- Example value -->
+        </div>
+
+        <!-- Total Campaigns Triggered Box -->
+        <div class="box">
+            <h2>Total Campaigns Triggered</h2>
+            <canvas id="campaignsChart"></canvas>
+            <p id="totalCampaignsValue">Total: <%=no_of_campaigns%> campaigns</p> <!-- Example value -->
+        </div>
+
+        <!-- Local Events in Area Box -->
+        <div class="box">
+            <h2>Local Events in Area</h2>
+            <canvas id="eventsChart"></canvas>
+            <p id="totalEventsValue">Total: 5 events</p> <!-- Example value -->
+        </div>
+    </div>
+
+    <div class="campaignhead">
+        Campaign Status
+    </div>
+    <% if (locals.campaign == "") { %>
+        <div class="campaign"><div>No Campaigns running currently</div></div>
+    <% } else { %>
+        <div class="campaign"><%= campaign %></div>
+    <% } %>
     <div class="retrieve-info">
         <div class="retrieve-title">Display all bookings on date:</div>
         <input type="date" id="retrieve-date" name="bookingdate">
@@ -26,7 +59,7 @@
     </div>
 
     <div class="booking-container">
-        <div class="booking-content">
+        <div class="booking-content black">
             <div class="book-head">name</div>
             <div class="book-head">username</div>
             <div class="book-head">date</div>
