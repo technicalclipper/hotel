@@ -3,6 +3,30 @@ document.getElementById("retrieve-date").addEventListener("change", function() {
     window.location.href = `/getbookingdetails/${date}`;
 });
 
+$(".triggerbutton").on("click",async()=>{
+    await trigger()
+})
+
+async function trigger() {
+    try {
+        const response = await fetch('/trigger');
+        const data = await response.json();
+        console.log(data);
+        const logMessage = data.log;
+        const imageUrl = data.iurl;
+        const campaign=data.campaign;
+        const no_of_campaigns=data.no_of_campaigns;
+        $(".log").text(logMessage);
+        $("#genimage").attr("src",imageUrl);
+        $(".campaign").text(campaign);                       
+        $("#totalCampaignsValue").text("Total: "+no_of_campaigns+ " campaigns");
+    }
+    catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+
 //for charts logic
 
 
