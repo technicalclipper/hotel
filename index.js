@@ -65,6 +65,8 @@ const db = new pg.Client({
 
 var campaign="";
 var no_of_campaigns=0;
+var logmessage="";
+var iurl="";
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
@@ -166,6 +168,16 @@ app.get("/getbookingdetails/:date",async(req,res)=>{
   } else {
     res.redirect("/adminlogin");
   }
+})
+
+app.get("/trigger",async (req,res)=>{
+  await don();
+  res.json({
+    log: logmessage,
+    iurl: iurl,
+    campaign:campaign,
+    no_of_campaigns:no_of_campaigns
+  });
 })
 
 
@@ -688,26 +700,33 @@ const tl=await get_no_of_bookings_for_room_on_daterange(lastMonday,todayDate,"Lo
 
 const tb=await get_no_of_bookings_for_room_on_daterange(lastMonday,todayDate,"Beach view room")
 
-//const result=await checkbookingrate(100,80,30,30,20,10,10,25,25,20,7,3);
-const result=await checkbookingrate(lt,tt,ld,lsd,ls,ll,lb,td,tsd,ts,tl,tb);
+const result=await checkbookingrate(100,80,30,30,20,10,10,25,25,20,7,3);
+//const result=await checkbookingrate(lt,tt,ld,lsd,ls,ll,lb,td,tsd,ts,tl,tb);
 const data=JSON.parse(result);
+logmessage=JSON.stringify(data)+'\n';
 var threshold=10;
 console.log(data);
   if("decreased" in data){
     if(data.decreased>threshold){
       console.log("low occupancy rate detected");
+      logmessage+="low occupancy rate detected"+'\n';       // for log message 
       const roomname=data.decreasedroom;
       console.log(roomname);
       const price= await get_price_from_db(roomname);
       console.log("campaign started");
+      logmessage+="campaign started"+'\n';           //for log message
       no_of_campaigns++;
       const airesponse=JSON.stringify(data);
       var prompts =await generatecampaign(airesponse,price);
       console.log(prompts);
+      logmessage+=prompts+'\n';                           //for log message
       var url =await generateimage(prompts);
+      iurl=url;
       await postToInsta(url);
       campaign=`low occupancy rate of ${data.decreased}% detected on ${todayDate},campaign generated and advertising post has been posted on insta`
       console.log(campaign);
+      logmessage+=campaign+'\n';              //for log message
+      
     }
   }
 } 
