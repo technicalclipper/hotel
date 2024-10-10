@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="navtitle">AP_ICE RESORT</div>
+        <a class="insta" href="https://www.instagram.com/sunbeachresort/"><div class="navtitle">AP_ICE RESORT</div></a>
         <a class="logout" href="/logout">logout</a>
     </div>
 
@@ -52,6 +52,24 @@
     <% } else { %>
         <div class="campaign"><%= campaign %></div>
     <% } %>
+    
+    <Div class="trigger">
+        <Div class="triggerhead">Click here to manually detect low occupancy and trigger campaign</Div>
+        <div class="triggerbutton">check</div>
+    </Div>
+
+    <div class="loghead">
+        Logs
+    </div>
+
+    <div class="logcontainer">
+        <div class="log" style="white-space: pre-wrap;">
+        </div>
+        <div class="image-container">
+            <img src="" alt="" id="genimage" />
+        </div>
+    </div>
+    
     <div class="retrieve-info">
         <div class="retrieve-title">Display all bookings on date:</div>
         <input type="date" id="retrieve-date" name="bookingdate">
