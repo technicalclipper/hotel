@@ -14,6 +14,7 @@ body{
 .navtitle{
     font-size: 40px;
     font-weight: 600;
+    color: white;
 }
 .logout{
     background-color: white;
@@ -122,6 +123,68 @@ body{
     cursor: pointer;
 }
 
+.trigger{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 80px;
+    align-items: center;
+    gap:30px;
+    margin-top: 50px;
+
+}
+.triggerbutton{
+    width:130px;
+    height:50px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    font-size: 25px;
+}
+.triggerhead{
+    font-size: 30px;
+    font-weight: 800;
+    color:black;
+}
+.loghead{
+    font-size: 30px;
+    font-weight: 800;
+    color:black;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.log{
+    width:626px;
+    height:358px;
+    border: 2px solid black;
+    margin-left: 80px; 
+    margin-top: 5px;
+    font-size: 25px;
+    overflow: scroll;
+    font-weight: 500;
+}
+.image-container{
+    height:358px;
+    width:626px;
+}
+
+#genimage{
+    height:358px;
+    width:626px;
+    border: 2px solid black;
+}
+.logcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:100px;
+}
+.insta{
+    text-decoration: none;
+}
 
 
 /* for graphs */
