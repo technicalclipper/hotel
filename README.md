@@ -1,7 +1,7 @@
 Sun Beach Resort Booking System
 This project is a complete Hotel Booking System that integrates AI for campaign generation based on booking trends. The system uses Gemini GenAI to detect low booking rates, generates marketing content through Bannerbear, and posts the campaign images automatically using the Instagram API.
 
-Features
+Features...
 User and Admin Login: Separate login for users and admins with role-based access.
 Room Booking: Users can view available rooms, check room details, and make bookings.
 View Past Bookings: Users can track their booking history.
